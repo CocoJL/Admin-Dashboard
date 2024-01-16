@@ -114,36 +114,69 @@ main {
 
 .upperpanel {
   display: grid;
-  grid-template-rows: 1fr 30px 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 0.5fr;
   background-color: #cdb4db;
   grid-area: upper;
   grid-template-areas:
     "search notification"
-    "hi ."
     "name buttons";
 }
 
 .upperpanel .search {
   grid-area: search;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
+.upperpanel .search input {
+  height: 30px;
+  width: 700px;
+  padding: 10px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+}
 .upperpanel .search img {
-  max-height: 20px;
+  max-height: 30px;
+}
+
+.upperpanel .notification {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-weight: 600;
+  justify-content: center;
 }
 
 .upperpanel .notification img {
-  max-height: 20px;
-}
-
-.upperpanel .hi {
-  grid-area: hi;
-  font-size: 12px;
-  font-weight: 600;
+  max-height: 30px;
 }
 
 .upperpanel .name {
   grid-area: name;
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.upperpanel .name .username {
+  display: flex;
+  flex-direction: column;
+}
+
+.upperpanel .name .username p {
+  font-weight: 600;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.upperpanel .name .username span {
+  font-weight: 600;
+  font-size: 12px;
+  margin-left: 10px;
 }
 
 .upperpanel .name img {
@@ -152,6 +185,19 @@ main {
 
 .upperpanel .buttons {
   grid-area: buttons;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+
+.upperpanel .buttons button {
+  padding: 10px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  width: 100px;
+  font-weight: 600;
 }
 /* Upperpanel */
 

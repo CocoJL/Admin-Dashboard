@@ -1,0 +1,41 @@
+/* #7c3aed */
+
+/* Dashboard transparent, when item is hovered turns #7c3aed and inside text #ffff, otherwise item is with #7c3aed color, Your projects side-border with #7c3aed, buttons with #7c3aed  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  max-height: 100vh;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 150px;
+  grid-template-areas:
+    "dashboard upper"
+    "dashboard main";
+}
+
+.dashboard {
+  background-color: #edede9;
+  display: grid;
+  grid-template-rows: 100px repeat(17, 1fr);
+  grid-template-columns: 1fr;
+  grid-area: dashboard;
+}
+
+.upperpanel {
+  background-color: #cdb4db;
+  grid-area: upper;
+}
+
+.mainpanel {
+  background-color: #dad7cd;
+  grid-area: main;
+}

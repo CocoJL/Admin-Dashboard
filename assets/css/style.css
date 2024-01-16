@@ -201,15 +201,140 @@ main {
 }
 /* Upperpanel */
 
+/* Main panel */
+
 .mainpanel {
   display: grid;
   background-color: #dad7cd;
   grid-area: main;
-  grid-template-columns: repeat(2, 1fr) 300px;
-  grid-template-rows: 90px repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50px repeat(3, 1fr);
   grid-template-areas:
-    "Project . Announcements"
-    "project1 project2 Acard"
-    "project3 project4 memes"
-    "project5 project6 memes1 ";
+    "project . announce"
+    "container1 container2 acard"
+    "container3 container4 acard"
+    "container5 container6 memes1 ";
 }
+
+.mainpanel .titel {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-left: 70px;
+}
+
+.mainpanel .titel h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.mainpanel .c1 {
+  grid-area: container1;
+}
+
+.mainpanel .c2 {
+  grid-area: container2;
+}
+
+.mainpanel .c3 {
+  grid-area: container3;
+}
+
+.mainpanel .c4 {
+  grid-area: container4;
+}
+
+.mainpanel .c5 {
+  grid-area: container5;
+}
+
+.mainpanel .c6 {
+  grid-area: container6;
+}
+
+.mainpanel .container .project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+}
+
+.mainpanel .container .project-container .project {
+  padding-top: 30px;
+  padding-left: 20px;
+  height: 100%;
+  width: 100%;
+  border-left: 6px solid #c8b6ff;
+  background-color: #fff;
+  border-radius: 10px;
+  gap: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.mainpanel .container .project-container .project .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 70%;
+}
+.mainpanel .container .project-container .project p {
+  font-weight: 600;
+}
+
+.mainpanel .container .project-container .project span {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.mainpanel .container .project-container .project .engage {
+  display: flex;
+  height: 20%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding-right: 30px;
+}
+
+.mainpanel .container .project-container .project .engage img {
+  max-height: 20px;
+}
+
+.mainpanel .announce {
+  grid-area: announce;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-left: 30px;
+}
+.mainpanel .announce h3 {
+  font-size: 16px;
+}
+
+.mainpanel .acard {
+  grid-area: acard;
+  padding: 15px;
+}
+
+.mainpanel .acard .acard-banner {
+  display: flex;
+  height: 100%;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 15px;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.mainpanel .acard .acard-banner .acard-text {
+  border-bottom: 3px solid #edede9;
+}
+
+.mainpanel .acard .acard-banner .acard-text h4 {
+  margin-bottom: 5px;
+}
+
+.mainpanel .acard .acard-banner .acard-text p {
+  font-size: 13px;
+}
+/* Main Panel */

@@ -22,18 +22,96 @@ main {
     "dashboard main";
 }
 
+/* Dashboard */
+
 .dashboard {
   background-color: #edede9;
   display: grid;
   grid-template-rows: 100px repeat(17, 1fr);
   grid-template-columns: 1fr;
   grid-area: dashboard;
+  grid-template-areas:
+    "dashboard"
+    "home"
+    "profile"
+    "messages"
+    "history"
+    "tasks"
+    "community"
+    "."
+    "settings"
+    "support"
+    "privacy";
 }
+
+.dashboard img {
+  max-height: 25px;
+}
+
+.dashboard .header img {
+  max-height: 50px;
+}
+
+.dashboard .icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 20px;
+  gap: 20px;
+}
+
+.dashboard .header {
+  grid-area: dashboard;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10px;
+  gap: 5px;
+}
+
+.dashboard .home {
+  grid-area: home;
+}
+
+.dashboard .profile {
+  grid-area: profile;
+}
+.dashboard .messages {
+  grid-area: messages;
+}
+.dashboard .history {
+  grid-area: history;
+}
+.dashboard .tasks {
+  grid-area: tasks;
+}
+
+.dashboard .community {
+  grid-area: community;
+}
+
+.dashboard .settings {
+  grid-area: settings;
+}
+
+.dashboard .support {
+  grid-area: support;
+}
+
+.dashboard .privacy {
+  grid-area: privacy;
+}
+
+/* Dashboard */
+
+/* Upperpanel */
 
 .upperpanel {
   background-color: #cdb4db;
   grid-area: upper;
 }
+
+/* Upperpanel */
 
 .mainpanel {
   background-color: #dad7cd;

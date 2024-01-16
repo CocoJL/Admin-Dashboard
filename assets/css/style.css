@@ -202,6 +202,14 @@ main {
 /* Upperpanel */
 
 .mainpanel {
+  display: grid;
   background-color: #dad7cd;
   grid-area: main;
+  grid-template-columns: repeat(2, 1fr) 300px;
+  grid-template-rows: 90px repeat(3, 1fr);
+  grid-template-areas:
+    "Project . Announcements"
+    "project1 project2 Acard"
+    "project3 project4 memes"
+    "project5 project6 memes1 ";
 }

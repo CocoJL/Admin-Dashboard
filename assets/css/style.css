@@ -213,14 +213,14 @@ main {
     "project . announce"
     "container1 container2 acard"
     "container3 container4 acard"
-    "container5 container6 memes1 ";
+    "container5 container6 insight ";
 }
 
 .mainpanel .titel {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  margin-left: 70px;
+  margin-left: 15px;
 }
 
 .mainpanel .titel h2 {
@@ -305,7 +305,7 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  margin-left: 30px;
+  margin-left: 15px;
 }
 .mainpanel .announce h3 {
   font-size: 16px;
@@ -323,11 +323,33 @@ main {
   background-color: #fff;
   border-radius: 15px;
   flex-direction: column;
+  justify-content: space-evenly;
   padding: 30px;
+  flex-wrap: wrap;
 }
 
-.mainpanel .acard .acard-banner .acard-text {
+.mainpanel .acard .acard-banner .acard-text:nth-child(1) {
   border-bottom: 3px solid #edede9;
+}
+
+.mainpanel .acard .acard-banner .acard-text:nth-child(2) {
+  border-bottom: 3px solid #edede9;
+}
+
+.mainpanel .acard .acard-banner .acard-text:nth-child(1) p {
+  margin-bottom: 10px;
+}
+
+.mainpanel .acard .acard-banner .acard-text:nth-child(2) h4 {
+  margin-top: 10px;
+}
+
+.mainpanel .acard .acard-banner .acard-text:nth-child(2) p {
+  margin-bottom: 10px;
+}
+
+.mainpanel .acard .acard-banner .acard-text:nth-child(3) h4 {
+  margin-top: 10px;
 }
 
 .mainpanel .acard .acard-banner .acard-text h4 {
@@ -336,5 +358,42 @@ main {
 
 .mainpanel .acard .acard-banner .acard-text p {
   font-size: 13px;
+}
+
+.insight-container {
+  grid-area: insight;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 15px;
+}
+
+.insight-container .insight-banner {
+  background-color: #fff;
+  height: 200px;
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.insight-container .description {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-size: 18px;
+}
+
+.insight-banner .insight {
+  display: flex;
+  align-items: center;
+  height: 33%;
+  gap: 10px;
+  margin-left: 30px;
+}
+
+.insight-banner .insight img {
+  height: 20px;
 }
 /* Main Panel */

@@ -1,7 +1,3 @@
-/* #7c3aed */
-
-/* Dashboard transparent, when item is hovered turns #7c3aed and inside text #ffff, otherwise item is with #7c3aed color, Your projects side-border with #7c3aed, buttons with #7c3aed  */
-
 * {
   padding: 0;
   margin: 0;
@@ -28,7 +24,8 @@ main {
 /* Dashboard */
 
 .dashboard {
-  background-color: #edede9;
+  background-color: #000;
+  color: #fff;
   display: grid;
   grid-template-rows: 100px repeat(17, 1fr);
   grid-template-columns: 1fr;
@@ -60,9 +57,17 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-left: 20px;
+  padding-left: 20px;
   gap: 20px;
   font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dashboard .icon:hover {
+  transition: 0.3s ease;
+  background-color: #ffffffaf;
+  color: #000;
 }
 
 .dashboard .header {
@@ -77,6 +82,7 @@ main {
 
 .dashboard .home {
   grid-area: home;
+  color: #fff;
 }
 
 .dashboard .profile {
@@ -116,7 +122,7 @@ main {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 0.5fr;
-  background-color: #cdb4db;
+  background-color: #f5f5f3;
   grid-area: upper;
   grid-template-areas:
     "search notification"
@@ -137,10 +143,11 @@ main {
   padding: 10px;
   border-radius: 30px;
   outline: none;
-  border: none;
+  border-color: #000;
 }
 .upperpanel .search img {
   max-height: 30px;
+  cursor: pointer;
 }
 
 .upperpanel .notification {
@@ -152,7 +159,12 @@ main {
 }
 
 .upperpanel .notification img {
-  max-height: 30px;
+  max-height: 25px;
+  cursor: pointer;
+}
+
+.upperpanel .notification .cat {
+  max-height: 50px;
 }
 
 .upperpanel .name {
@@ -179,8 +191,8 @@ main {
   margin-left: 10px;
 }
 
-.upperpanel .name img {
-  max-height: 40px;
+.upperpanel .name .user-image img {
+  max-height: 60px;
 }
 
 .upperpanel .buttons {
@@ -195,17 +207,24 @@ main {
   padding: 10px;
   border-radius: 30px;
   outline: none;
-  border: none;
+  background-color: #000;
   width: 100px;
   font-weight: 600;
+  cursor: pointer;
+  color: #fff;
 }
+
+.upperpanel .buttons button:active {
+  transform: scale(0.95);
+}
+
 /* Upperpanel */
 
 /* Main panel */
 
 .mainpanel {
   display: grid;
-  background-color: #dad7cd;
+  background-color: #fff;
   grid-area: main;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 50px repeat(3, 1fr);
@@ -265,11 +284,18 @@ main {
   padding-left: 20px;
   height: 100%;
   width: 100%;
-  border-left: 6px solid #c8b6ff;
-  background-color: #fff;
+  border-left: 6px solid #000;
+  background-color: #edede9;
   border-radius: 10px;
   gap: 5px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  cursor: pointer;
+}
+
+.mainpanel .container .project-container .project:hover {
+  transition: 0.3s ease;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .mainpanel .container .project-container .project .description {
@@ -294,6 +320,7 @@ main {
   align-items: center;
   gap: 20px;
   padding-right: 30px;
+  cursor: pointer;
 }
 
 .mainpanel .container .project-container .project .engage img {
@@ -320,20 +347,21 @@ main {
   display: flex;
   height: 100%;
   width: 300px;
-  background-color: #fff;
+  background-color: #edede9;
   border-radius: 15px;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 30px;
   flex-wrap: wrap;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 
 .mainpanel .acard .acard-banner .acard-text:nth-child(1) {
-  border-bottom: 3px solid #edede9;
+  border-bottom: 3px solid #000;
 }
 
 .mainpanel .acard .acard-banner .acard-text:nth-child(2) {
-  border-bottom: 3px solid #edede9;
+  border-bottom: 3px solid #000;
 }
 
 .mainpanel .acard .acard-banner .acard-text:nth-child(1) p {
@@ -369,13 +397,15 @@ main {
 }
 
 .insight-container .insight-banner {
-  background-color: #fff;
+  background-color: #edede9;
   height: 200px;
   width: 100%;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 
 .insight-container .description {
@@ -390,10 +420,18 @@ main {
   align-items: center;
   height: 33%;
   gap: 10px;
-  margin-left: 30px;
+  cursor: pointer;
+}
+
+.insight-banner .insight:nth-child(1) {
+  border-bottom: 3px solid #000;
+}
+
+.insight-banner .insight:nth-child(2) {
+  border-bottom: 3px solid #000;
 }
 
 .insight-banner .insight img {
-  height: 20px;
+  height: 25px;
 }
 /* Main Panel */
